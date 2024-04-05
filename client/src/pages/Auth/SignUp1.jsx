@@ -1,6 +1,6 @@
 import React from "react";
-import loginImage from "../../assests/loginImage.png";
-import logoImage from "../../assests/logo.png";
+import { logoImage, loginImage } from "../../components/Constant";
+
 
 const SignUp1 = () => {
   return (
