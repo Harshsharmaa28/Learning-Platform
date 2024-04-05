@@ -53,7 +53,7 @@ function App() {
       id: 8,
     },
     {
-      path: "/signup1",
+      path: "/signup",
       element: <SignUp1 />,
       id: 9,
     },

@@ -2,15 +2,16 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './Landingpage.css';
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 const Landingpage = () => {
   const [flipSideBar, setflipSideBar] = useState(true);
 
   useEffect(() => {
     const toggleState = () => {
-      setflipSideBar(!flipSideBar)
+      setflipSideBar(prev => !prev)
     }
-    const intervalId = setInterval(toggleState, 3000);
+    const intervalId = setInterval(toggleState, 4000);
 
     return () => clearInterval(intervalId);
   }, [])
@@ -19,20 +20,40 @@ const Landingpage = () => {
     <div className='flex justify-between'>
       <div className='ml-40 flex flex-col mt-16'>
         <div className=' text-5xl flex  gap-2 font-bold'>IMPROVE YOUR
-          <div className=' text-[#7E00E1]'>ACADEMICS</div>
+          <div className='text-[#7E00E1]'>
+            <span className="word-animation">A</span>
+            <span className="word-animation" style={{ animationDelay: '0.1s' }}>C</span>
+            <span className="word-animation" style={{ animationDelay: '0.2s' }}>A</span>
+            <span className="word-animation" style={{ animationDelay: '0.3s' }}>D</span>
+            <span className="word-animation" style={{ animationDelay: '0.4s' }}>E</span>
+            <span className="word-animation" style={{ animationDelay: '0.5s' }}>M</span>
+            <span className="word-animation" style={{ animationDelay: '0.6s' }}>I</span>
+            <span className="word-animation" style={{ animationDelay: '0.7s' }}>C</span>
+            <span className="word-animation" style={{ animationDelay: '0.8s' }}>S</span>
+          </div>
         </div>
         <div className=' flex gap-2 font-bold text-5xl mt-5'>GET RIGHT
-          <div className=' text-[#C1BA00]'>MENTORS</div>
+          <div className='text-[#C1BA00]'>
+            <span className="word-animation" style={{ animationDelay: '2s' }}>M</span>
+            <span className="word-animation" style={{ animationDelay: '2.1s' }}>E</span>
+            <span className="word-animation" style={{ animationDelay: '2.2s' }}>N</span>
+            <span className="word-animation" style={{ animationDelay: '2.3s' }}>T</span>
+            <span className="word-animation" style={{ animationDelay: '2.4s' }}>O</span>
+            <span className="word-animation" style={{ animationDelay: '2.5s' }}>R</span>
+            <span className="word-animation" style={{ animationDelay: '2.6s' }}>S</span>
+          </div>
         </div>
         <div className=' mt-4 py-10 max-w-[35rem] text-lg'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio rerum nobis natus eius odit exercitationem repellat, ex autem iusto mollitia veritatis fuga id cum quos expedita atque explicabo maiores totam.</div>
         <div className=' mt-6'>
-          <button
-            type="button"
-            className="flex  rounded-md bg-black px-8 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-          >
-            Get Started
-            <ArrowRight className=" mt-1 ml-2 h-4 w-4" />
-          </button>
+          <Link to='/signup'>
+            <button
+              type="button"
+              className="flex  rounded-md bg-black px-8 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Get Started
+              <ArrowRight className=" mt-1 ml-2 h-4 w-4" />
+            </button>
+          </Link>
         </div>
       </div>
       <div className='h-auto mr-20 flex gap-10'>

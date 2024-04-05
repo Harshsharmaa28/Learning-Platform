@@ -1,45 +1,26 @@
-.wrapper {
-  width: 100vw;
-  text-align: center;
-  span {
-    -webkit-text-stroke-width: 1.25px;
-    -webkit-text-stroke-color: #000;
-    font-size: 100px;
-    text-shadow: 0 0px #f3c623, 0 0px #f2aaaa;
-    transform: translate(0, 100%) rotate(4deg);
-    animation: jump 2s ease-in-out infinite;
-    display: inline-block;
-    font-family: "Titan One", cursive;
-    color: #fff;
 
-    @for $i from 1 through 7 {
-      &:nth-child(#{$i}) {
-        animation-delay: 120ms * $i;
-      }
-    }
+@keyframes revealWord {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  20% {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+  80% {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+  100% {
+    opacity: 0; 
+    transform: translateY(-20px);
   }
 }
-@keyframes jump {
-  33% {
-    text-shadow: 0 60px #f37121, 0 150px #f2aaaa;
-  }
-  50% {
-    transform: translate(0, 0) rotate(-4deg);
-    text-shadow: 0 0px #8fc0a9, 0 0px #84a9ac;
-  }
-  66.67% {
-    text-shadow: 0 -60px #d54062, 0 -150px #8fc0a9;
-  }
+
+/* Apply animation to the word inside each word-animation class */
+.word-animation {
+  animation: revealWord 5s linear infinite; /* Use revealWord animation */
+  animation-delay: 0s, 3s; /* Delay first and second word */
 }
-@media screen and (max-height: 200px) {
-  .wrapper {
-    transform: scale(0.3,0.3);
-  }
-}
-@media screen and (max-width: 576px) {
-  .wrapper {
-    span {
-      font-size: 50px;
-    }
-  }
-}
+
