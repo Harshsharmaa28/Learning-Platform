@@ -1,5 +1,10 @@
 import React from "react";
-import { logoImage, loginImage } from "../../components/Constant";
+import {
+  logoImage,
+  loginImage,
+  contactUsVideo,
+  loginVideo,
+} from "../../components/Constant";
 
 const SignIn = () => {
   return (
@@ -81,6 +86,13 @@ const SignIn = () => {
       {/* Right Side: Image */}
       <div className="lg:w-1/2 bg-white hidden lg:flex flex-col justify-center items-center">
         <img src={loginImage} alt="Illustration" className="max-w-2xl" />
+        {/* <video
+          style={{ width: "400px", height: "500px" }}
+          src={loginVideo}
+          autoPlay
+          loop
+          muted
+        ></video> */}
         <div className=" text-center px-20 ">
           <div className="   text-2xl font-bold">
             Stay with us, learn with us
