@@ -2,7 +2,7 @@ import About from "./pages/AboutUs/About";
 import Footer from "./components/Footer/Footer";
 import Homepage from "./components/Homepage/Homepage";
 import Contact from "./pages/ContactUs/Contact";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Scholarship from "./pages/Scholarship/Scholarship";
 import Faqs from "./pages/Faqs/Faqs";
 import Mentors from "./pages/Mentors/Mentors";
