@@ -124,7 +124,6 @@ import {
 } from "../../components/Constant";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./Firebase";
-import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
@@ -136,28 +135,28 @@ const SignIn = () => {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       localStorage.setItem("user", JSON.stringify(result));
-      toast.success("Signin Successfully", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      // toast.success("Signin Successfully", {
+      //   position: "top-right",
+      //   autoClose: 2000,
+      //   hideProgressBar: true,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "colored",
+      // });
       navigate("/");
     } catch (error) {
-      toast.error("Sigin Failed", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
+      // toast.error("Sigin Failed", {
+      //   position: "top-right",
+      //   autoClose: 5000,
+      //   hideProgressBar: true,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "colored",
+      // });
     }
   };
 
