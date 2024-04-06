@@ -105,7 +105,6 @@ import { logoImage, loginImage } from "../../components/Constant";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDB } from "./Firebase";
 import { Timestamp, addDoc, collection } from "firebase/firestore";
-import "react-toastify/dist/ReactToastify.css";
 
 const SignUp1 = () => {
   const [name, setName] = useState("");
